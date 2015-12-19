@@ -1,13 +1,6 @@
 class Student < User
   before_validation :age_greater_than_18
-
-  def age
-    return 0 unless dob
-    age = Date.today.year - dob.year 
-    age -= 1 if dob > Date.today.years_ago( age )
-    age
-  end
-
+  
   private
   def age_greater_than_18
     return false if dob.nil?
