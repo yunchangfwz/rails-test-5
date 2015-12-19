@@ -7,4 +7,7 @@ RSpec.describe School, type: :model do
     it { should enumerize(:type_of_school).in(:university, :high_school, :secondary_school, :primary_school) }
   end
 
+  context 'Association' do
+    it { should have_and_belong_to_many :students }
+  end
 end
