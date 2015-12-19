@@ -1,5 +1,5 @@
 class Student < User
-  before_validation :age_greater_than_18
+  validate :age_greater_than_18
   
   private
   def age_greater_than_18
